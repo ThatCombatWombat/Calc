@@ -1,10 +1,10 @@
 function validateForm() {
     // Get the value of the input fields
-    let l = document.getElementById("length").value;
-    let h = document.getElementById("height").value;
-    let lb = document.getElementById("long").value;
-    let sb = document.getElementById("short").value;
-    let m = document.getElementById("mass").value;
+    let l =  parseInt(document.getElementById("length").value);
+    let h = parseInt(document.getElementById("height").value);
+    let lb =  parseInt(document.getElementById("long").value);
+    let sb =  parseInt(document.getElementById("short").value);
+    let m =  parseInt(document.getElementById("mass").value);
   
     let text;
   
