@@ -29,7 +29,14 @@ function validateForm() {
     document.getElementById("demo").innerHTML = sound;
   }
 
-
+  // Add event listener to the "mass" input field
+  var input = document.getElementById("extra");
+  input.addEventListener("keypress", function(event) {
+    if (event.key === "Enter") {
+      event.preventDefault();
+      document.getElementById("extraBtn").click();
+    }
+  });
 
   // Add event listener to the "mass" input field
   var input = document.getElementById("mass");
