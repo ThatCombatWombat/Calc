@@ -1,10 +1,8 @@
-/* styles.css */
-
 /* General styles for the entire page */
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #1e1e1e;
-    color: #f0f0f0;
+    font-family: 'Georgia', serif;
+    background-color: #2b1d0e;
+    color: #f3e8d7;
     margin: 0;
     padding: 0;
     display: flex;
@@ -17,18 +15,31 @@ body {
 
 /* Styling for the page header */
 h1 {
-    color: #00adb5;
+    color: #c19a6b;
     margin-bottom: 20px;
-    font-size: 2rem;
+    font-size: 2.5rem;
+    font-weight: bold;
 }
 
-/* Container for the form elements */
-div {
-    background-color: #2b2b2b;
+/* Container for the entire form */
+.form-container {
+    display: flex;
+    background-color: #3e2c20;
     padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    width: 300px;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
+    width: 650px;
+    justify-content: space-between;
+}
+
+/* Left Column */
+.left-column {
+    width: 48%;
+}
+
+/* Right Column */
+.right-column {
+    width: 48%;
 }
 
 /* Styling for labels */
@@ -36,7 +47,8 @@ label {
     font-size: 1rem;
     margin-bottom: 8px;
     display: block;
-    color: #dcdcdc;
+    color: #e3d2b4;
+    font-weight: bold;
 }
 
 /* Styling for input fields */
@@ -44,47 +56,55 @@ input[type="text"] {
     width: 100%;
     padding: 10px;
     margin-bottom: 15px;
-    border: 1px solid #444;
-    border-radius: 4px;
-    background-color: #333;
-    color: #f0f0f0;
+    border: 1px solid #6b4f3d;
+    border-radius: 6px;
+    background-color: #5a4231;
+    color: #f3e8d7;
     box-sizing: border-box;
     font-size: 1rem;
+    font-family: 'Georgia', serif;
 }
 
 /* Change the input border color on focus */
 input[type="text"]:focus {
-    border-color: #00adb5;
+    border-color: #c19a6b;
     outline: none;
 }
 
-/* Styling for the button */
+/* Styling for the buttons */
 button {
-    background-color: #00adb5;
-    color: #1e1e1e;
+    background-color: #c19a6b;
+    color: #3e2c20;
     border: none;
-    padding: 10px 15px;
-    border-radius: 4px;
+    padding: 12px 18px;
+    border-radius: 6px;
     cursor: pointer;
     font-size: 1rem;
+    font-family: 'Georgia', serif;
     transition: background-color 0.3s ease;
+    margin-bottom: 10px;
 }
 
 /* Button hover effect */
 button:hover {
-    background-color: #007f7f;
+    background-color: #a67c52;
 }
 
 /* Styling for the result paragraph */
 #demo {
     margin-top: 20px;
     font-size: 1.2rem;
-    color: #ffffff;
+    color: #f3e8d7;
 }
 
 /* Responsive design for mobile devices */
 @media (max-width: 600px) {
-    div {
+    .form-container {
+        flex-direction: column;
         width: 90%;
+    }
+
+    .left-column, .right-column {
+        width: 100%;
     }
 }

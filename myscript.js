@@ -1,20 +1,36 @@
 function validateForm() {
     // Get the value of the input fields
-    let l =  parseInt(document.getElementById("length").value);
-    let h = parseInt(document.getElementById("height").value);
-    let lb =  parseInt(document.getElementById("long").value);
-    let sb =  parseInt(document.getElementById("short").value);
-    let m =  parseInt(document.getElementById("mass").value);
+    let l =  parseFloat(document.getElementById("length").value);
+    let h = parseFloat(document.getElementById("height").value);
+    let lb =  parseFloat(document.getElementById("long").value);
+    let sb =  parseFloat(document.getElementById("short").value);
+    let m =  parseFloat(document.getElementById("mass").value);
   
     let text;
   
     // Calculate the value
-    text = m / (0.5 * (sb + lb) * h * l);
+    text = Math.round((m / (0.5 * (sb + lb) * h * l))*100)/100 + " grams per cubic centimeter";
   
     // Display the result
     document.getElementById("demo").innerHTML = text;
   }
   
+  function calc_sound() {
+    // Get the value of the input fields
+    let l =  parseFloat(document.getElementById("length").value);
+    let freq = parseFloat(document.getElementById("extra").value);
+  
+    let sound;
+  
+    // Calculate the value
+    sound = Math.round((l*2*freq)) + " m/s is the speed of sound";
+  
+    // Display the result
+    document.getElementById("demo").innerHTML = sound;
+  }
+
+
+
   // Add event listener to the "mass" input field
   var input = document.getElementById("mass");
   input.addEventListener("keypress", function(event) {

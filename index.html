@@ -7,27 +7,39 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Calculate Density of Trapezoid</h1>
-    <div>
-        <label for="length">Length</label><br>
-        <input type="text" id="length" name="length"><br>
+    <h1>Luthier Tools</h1>
+    <div class="form-container">
+        <!-- Left Column -->
+        <div class="left-column">
+            <label for="length">Length - Cm</label><br>
+            <input type="text" id="length" name="length"><br>
 
-        <label for="height">Height</label><br>
-        <input type="text" id="height" name="height"><br>
+            <label for="height">Width - Cm</label><br>
+            <input type="text" id="height" name="height"><br>
 
-        <label for="Long Base">Long base</label><br>
-        <input type="text" id="long" name="long"><br>
+            <label for="long">Thick Edge - Cm</label><br>
+            <input type="text" id="long" name="long"><br>
 
-        <label for="short base">Short base</label><br>
-        <input type="text" id="short" name="short"><br>
+            <label for="short">Narrow Edge - Cm</label><br>
+            <input type="text" id="short" name="short"><br>
 
-        <label for="Mass">Mass</label><br>
-        <input type="text" id="mass" name="mass"><br>
+            <label for="mass">Mass - G</label><br>
+            <input type="text" id="mass" name="mass"><br>
+        </div>
 
-        
-        <button type="button" id="myBtn" onclick="validateForm()">Calculate</button>
-        <p id="demo"></p>
-        <script type="text/javascript" src="myscript.js"></script>
-    </div
+        <!-- Right Column -->
+        <div class="right-column">
+            <label for="extra">Frequency - Hz</label><br>
+            <input type="text" id="extra" name="extra"><br>
+
+            <button type="button" id="extraBtn" onclick="calc_sound()">Calculate Speed of Sound</button>
+            <button type="button" id="myBtn" onclick="validateForm()">Calculate Density</button><br>
+        </div>
+    </div>
+
+    
+
+    <p id="demo"></p>
+    <script type="text/javascript" src="myscript.js"></script>
 </body>
 </html>
